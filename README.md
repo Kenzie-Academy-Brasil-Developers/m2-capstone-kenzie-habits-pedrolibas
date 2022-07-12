@@ -124,3 +124,44 @@ Durante o desenvolvimento o repositório deve permanecer private, após as apres
 ## Entrega
 
 Faça o push do código para o seu repositório GitHub e implemente-o GitHub pages. Não esqueçam de colocar o repositório como **Private** e adicionar em **Configurações -> Colaboradores e Times**, o time **team-m2-correcoes**. No Canvas, por favor, enviar a url do GitHub Pages: (ex: https://nomedeusuario.github.io/oregon-trail-inheritance), enviar o link do repositório e o nome de todos os integrantes da equipe nos comentários.
+
+
+import User from "./user.controller.js";
+import Habit from "./habit.controller.js";
+
+// const login = await User.userLogin({
+//     "email": "grupo5Heric@mail.com",
+//     "password": "743772e4a7c6961978fb32c684d4ea0b"
+// })
+
+// console.log(login)
+
+// const updateUser = await User.userUpdate("https://www.google.com/images/Heric")
+
+// console.log(updateUser)
+
+// const createHabit = await Habit.createHabit({
+//     "habit_title": "bater ponto corretamente",
+//     "habit_description": "bater ponto todos os dias nos horários corretos",
+//      "habit_category": "Saude"
+// })
+
+// const category = await Habit.categoryHabit("saude")
+// console.log(category)
+
+// const updateHabit = await Habit.updateHabit({
+//     "habit_title": "Jogar volei aos domingos no parque Marina",
+//     "habit_description": "Ir aos domingos com a família no parque Marina e aproveitar para jogar vôlei de areia",
+//     "habit_category": "lazer"
+// }, 225)
+
+// console.log(updateHabit)
+
+// const complete = await Habit.completeHabit(225)
+// console.log(complete)
+
+// const deleta = await Habit.deleteHabit(245)
+// console.log(deleta)
+
+// const allHabit = await Habit.allHabit()
+// console.log(allHabit)
