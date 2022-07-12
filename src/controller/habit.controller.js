@@ -71,4 +71,5 @@ export default class Habit{
         .then(res => res.json())
         .catch(err => console.log(err))
     }
+    
 }
