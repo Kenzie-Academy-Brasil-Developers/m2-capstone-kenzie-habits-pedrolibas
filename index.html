@@ -4,7 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <title>Kenzie Habit</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <h2>KenzieHabit</h2>
+      <img src="./src/assets/img/user.png" alt="">
+    </header>
+
+    <main>
+      <section class="section_perfil">
+        <div class="div_perfil">
+          <img src="./src/assets/img/user.png" alt="">
+          <h3>Nome de perfil</h3>
+        </div>
+      </section>
+  
+      <nav class="filtros">
+        <h3>Tarefas</h3>
+        <div class="filtros_categoria">
+          <p class="filtro_todos">Todos</p>
+          <p class="filtro_concluido">concluídos</p>
+          <button>Criar</button>
+        </div>
+      </nav>
+  
+      <section class="section_content">
+
+        <div class="box_header">
+          <p class="box_status">Status</p>
+          <p class="box_title">Título</p>
+          <p class="box_description">Descrição</p>
+          <p class="box_category">Categoria</p>
+          <p class="box_edit">Editar</p>
+        </div>
+
+        <div class="div_content">
+          <ul>
+            <li class="li_content">
+              <input type="checkbox">
+              <p class="title_content">Fazer exercícios segunda pela manhã</p>
+              <p class="description_content">Ir correr na  praça próximo de casa</p>
+              <span>Saúde</span>
+              <img src="" alt="">
+            </li>
+            <li class="li_content">
+              <input type="checkbox">
+              <p class="title_content">Fazer exercícios segunda pela manhã</p>
+              <p class="description_content">Ir correr na  praça próximo de casa</p>
+              <span>Saúde</span>
+              <img src="" alt="">
+            </li>
+            <li class="li_content">
+              <input type="checkbox">
+              <p class="title_content">Fazer exercícios segunda pela manhã</p>
+              <p class="description_content">Ir correr na  praça próximo de casa</p>
+              <span>Saúde</span>
+              <img src="" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <button>Carregar Mais</button>
+      </aside>
+    </main>
+  </body>
+
 </html>
+
