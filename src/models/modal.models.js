@@ -40,11 +40,11 @@ export default class Modais{
         textoTitulo.type = 'text'
         textoDescricao.cols = '30'
         textoDescricao.rows = '10'
-        casa.value = 'casa'
-        estudo.value = 'estudo'
-        lazer.value = 'lazer'
-        trabalho.value = 'trabalho'
-        saude.value = 'saude'
+        casa.value = 'Casa'
+        estudo.value = 'Estudo'
+        lazer.value = 'Lazer'
+        trabalho.value = 'Trabalho'
+        saude.value = 'Saúde'
 
         modalCriar.classList.add('modal__criar')
         container.classList.add('container')

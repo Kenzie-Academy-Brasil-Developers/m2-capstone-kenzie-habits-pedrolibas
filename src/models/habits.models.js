@@ -12,6 +12,7 @@ export default class cards {
     }
     static async listarHabitos() {
         const habito = await Habit.allHabit()
+        console.log(habito)
         habito.forEach(element => {
             const card = new cards(element.habit_id, element.habit_title, element.habit_description, element.habit_category, element.habit_status)
             card.createCard()
@@ -54,5 +55,3 @@ export default class cards {
         maindDiv.append(container)
     }
 }
-
-cards.listarHabitos()
