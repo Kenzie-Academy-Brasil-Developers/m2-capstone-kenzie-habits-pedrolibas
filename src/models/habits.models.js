@@ -11,6 +11,7 @@ export class cards {
     static async listarHabitos() {
         const habito = await Habit.allHabit()
         habito.forEach(element => {
+            console.log('entrou')
             const card = new cards(element.habit_id, element.habit_title, element.habit_description, element.habit_category, element.habit_status)
             card.createCard()
         })
@@ -22,23 +23,28 @@ export class cards {
         const container = document.createElement('li')
         const status = document.createElement('input')
         const title = document.createElement('p')
-        const description = document.createElement('p')
+        const descricao = document.createElement('p')
+        const divCategoria = document.createElement('div')
         const categoria = document.createElement('span')
-        const editButton = document.createElement('img')
+        const editButton = document.createElement('button')
+        const i = document.createElement('i')
 
-        container.classList.add('li_content')
+        container.classList.add('conteudo_li')
         status.classList.add('checkbox')
-        title.classList.add('title_content')
-        description.classList.add('description_content')
-        categoria.classList.add('card__categoria')
-        editButton.classList.add('card__edit')
+        title.classList.add('conteudo_titulo')
+        descricao.classList.add('conteudo_descricao')
+        divCategoria.classList.add('conteudo_categoria')
+        editButton.classList.add('conteudo_editar')
+        i.classList.add('fa-solid', 'fa-ellipsis')
 
         title.innerText = this.title
-        description.innerText = this.description
+        descricao.innerText = this.description
         categoria.innerText = this.categoria
         status.type = 'checkbox'
 
-        container.append(status, title, description, categoria, editButton)
+        editButton.append(i)
+        divCategoria.append(categoria)
+        container.append(status, title, descricao, divCategoria, editButton)
         maindDiv.append(container)
     }
 }
