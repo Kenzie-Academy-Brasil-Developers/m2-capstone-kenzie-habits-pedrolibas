@@ -1,24 +1,23 @@
-import User from "../controller/user.controller.js";
-import Habit from "../controller/nome.controller.js";
-
-const login = await User.userLogin({
-    "email": "grupo5Heric@mail.com",
-    "password": "743772e4a7c6961978fb32c684d4ea0b"
-})
-
-console.log(login)
+import Habit from "../controller/habit.controller.js";
 
 export class cards {
-    constructor(id, titutlo, descricao, categoria, status) {
+    constructor(id, title, description, category, status){
         this.id = id
-        this.titutlo = titutlo;
-        this.descricao = descricao;
-        this.categoria = categoria
+        this.title = title
+        this.description = description
+        this.categoria = category
         this.status = status
+    }
+    static async listarHabitos() {
+        const habito = await Habit.allHabit()
+        habito.forEach(element => {
+            const card = new cards(element.habit_id, element.habit_title, element.habit_description, element.habit_category, element.habit_status)
+            card.createCard()
+        })
     }
 
     createCard() {
-        const maindDiv = document.querySelector('.divCard')
+        const maindDiv = document.querySelector('.div_ul')
 
         const container = document.createElement('li')
         const status = document.createElement('input')
@@ -27,10 +26,10 @@ export class cards {
         const categoria = document.createElement('span')
         const editButton = document.createElement('img')
 
-        container.classList.add('card__div')
-        status.classList.add('card__status')
-        title.classList.add('card__titulo')
-        description.classList.add('card__descricao')
+        container.classList.add('li_content')
+        status.classList.add('checkbox')
+        title.classList.add('title_content')
+        description.classList.add('description_content')
         categoria.classList.add('card__categoria')
         editButton.classList.add('card__edit')
 
@@ -43,3 +42,5 @@ export class cards {
         maindDiv.append(container)
     }
 }
+
+cards.listarHabitos()
