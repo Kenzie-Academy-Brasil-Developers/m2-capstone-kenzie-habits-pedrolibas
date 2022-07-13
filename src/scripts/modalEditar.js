@@ -1,5 +1,6 @@
 import requisicaoEditar from "./formModalEditar.js"
 
+
 class ModalEditar{
     static editar(){
         const body = document.querySelector("body")
