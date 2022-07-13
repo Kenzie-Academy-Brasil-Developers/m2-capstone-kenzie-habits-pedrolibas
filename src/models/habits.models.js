@@ -1,3 +1,13 @@
+import User from "../controller/user.controller.js";
+import Habit from "../controller/nome.controller.js";
+
+const login = await User.userLogin({
+    "email": "grupo5Heric@mail.com",
+    "password": "743772e4a7c6961978fb32c684d4ea0b"
+})
+
+console.log(login)
+
 export class cards {
     constructor(id, titutlo, descricao, categoria, status) {
         this.id = id
