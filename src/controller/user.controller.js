@@ -10,11 +10,6 @@ export default class User {
                 body: JSON.stringify(user)
             })
             .then(res => res.json())
-            .then((res) => {
-                localStorage.setItem("@kenzie-habits:user", JSON.stringify(res.response))
-                localStorage.setItem("@kenzie-habits:token", JSON.stringify(res.token))
-                return res
-            })
             .catch(err => console.log(err))
     }
 

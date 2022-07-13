@@ -1,7 +1,7 @@
 import requisicoesPerfil from "./formEditarPerfil.js"
 
-class ModalPerfil{
-    static editarPerfil(){
+class ModalPerfil {
+    static editarPerfil() {
         const body = document.querySelector("body")
         const modalPerfil = document.createElement("div")
         const container = document.createElement("div")
