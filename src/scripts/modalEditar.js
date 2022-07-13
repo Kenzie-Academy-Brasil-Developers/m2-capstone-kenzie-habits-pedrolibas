@@ -1,4 +1,4 @@
-import teste from "./formModalEditar.js"
+import requisicaoEditar from "./formModalEditar.js"
 
 class ModalEditar{
     static editar(){
@@ -82,4 +82,4 @@ class ModalEditar{
 }
 
 ModalEditar.editar()
-teste()
+requisicaoEditar()
