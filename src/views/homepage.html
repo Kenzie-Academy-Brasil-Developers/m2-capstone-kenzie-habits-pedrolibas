@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/0333ed942d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/homepage.css">
+    <title>Kenzie Habit</title>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h2>KenzieHabit</h2>
+      <img src="./src/assets/img/user.png" alt="">
+    </header>
+
+    <main>
+      <section class="perfil_secao">
+        <div class="perfil_div">
+          <img src="./src/assets/img/user.png" alt="">
+          <h3>Nome de perfil</h3>
+        </div>
+      </section>
+  
+      <section class="filtro_secao">
+        <nav class="filtro_nav">
+          <h3>Tarefas</h3>
+          <div class="filtro_categoria">
+            <p class="filtro_todos">Todos</p>
+            <p class="filtro_concluido">concluídos</p>
+            <button>Criar</button>
+          </div>
+        </nav>
+      </section>
+  
+      <section class="box_secao">
+
+        <div class="box_cabecalho">
+          <h3 class="box_status">Status</h3>
+          <h3 class="box_titulo">Título</h3>
+          <h3 class="box_descricao">Descrição</h3>
+          <h3 class="box_categoria">Categoria</h3>
+          <h3 class="box_editar">Editar</h3>
+        </div>
+
+        <div class="conteudo_div">
+          <ul>
+            <li class="conteudo_li">
+              <input type="checkbox">
+              <p class="conteudo_titulo">Fazer exercícios segunda pela manhã</p>
+              <p class="conteudo_descricao">Ir correr na  praça próximo de casa</p>
+              <div class="conteudo_categoria"><span>Saúde</span></div>
+              <button class="conteudo_editar"><i class="fa-solid fa-ellipsis"></i></button>
+            </li>
+            <li class="conteudo_li">
+              <input type="checkbox">
+              <p class="conteudo_titulo">Fazer exercícios segunda pela manhã</p>
+              <p class="conteudo_descricao">Ir correr na  praça próximo de casa</p>
+              <div class="conteudo_categoria"><span>Saúde</span></div>
+              <button class="conteudo_editar"><i class="fa-solid fa-ellipsis"></i></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <button>Carregar Mais</button>
+      </aside>
+    </main>
+  </body>
+
+</html>
