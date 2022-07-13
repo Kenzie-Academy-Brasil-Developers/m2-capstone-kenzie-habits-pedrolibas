@@ -14,12 +14,11 @@ export default function requisicaoCriar(id) {
 
     btnInserir.addEventListener("click", async (e) => {
         e.preventDefault()
-        await Habit.updateHabit({
+        await Habit.createHabit({
             "habit_id": id,
             "habit_title": titulo.value,
             "habit_description": descricao.value,
             "habit_category": selecionar.value,
-            "habit_status": check.checked
         })
     })
 
