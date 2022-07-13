@@ -16,13 +16,17 @@ export default class Formularios {
 
         btnEnviar.addEventListener("click", async (e) => {
             e.preventDefault()
-            await Habit.updateHabit({
-                "habit_id": id,
-                "habit_title": titulo.value,
-                "habit_description": descricao.value,
-                "habit_category": seleciona.value,
-                "habit_status": check.checked
-            })
+            if (titulo.value === "" || descricao.value === "" || seleciona.value === "") {
+                alert("preencha todos os campos")
+            } else {
+                await Habit.updateHabit({
+                    "habit_title": titulo.value,
+                    "habit_description": descricao.value,
+                    "habit_category": seleciona.value
+                }, id)
+
+                window.location.reload(true)
+            }
         })
     }
 
@@ -40,52 +44,56 @@ export default class Formularios {
 
         btnInserir.addEventListener("click", async (e) => {
             e.preventDefault()
-            await Habit.createHabit({
-                "habit_title": titulo.value,
-                "habit_description": descricao.value,
-                "habit_category": selecionar.value,
-            })
+            if (titulo.value === "" || descricao.value === "" || selecionar.value === "") {
+                alert("preencha todos os campos")
+            } else {
+                await Habit.createHabit({
+                    "habit_title": titulo.value,
+                    "habit_description": descricao.value,
+                    "habit_category": selecionar.value,
+                })
+
+                window.location.reload(true)
+            }
         })
     }
 
     static requisicaoExcluir(id) {
         const btnSair = document.querySelector('.button__excluir__sair')
         const modal = document.querySelector('.modal__excluir')
-        const btnExcluir = document.querySelector('.modal__botao__EbtnExcluir')
+        const btnExcluir = document.querySelector('.modal__botao__excluir')
         const btnCancelar = document.querySelector('.modal__botao__cancelar')
-    
+
         btnSair.addEventListener("click", () => {
             modal.remove()
         })
-    
+
         btnCancelar.addEventListener("click", () => {
             modal.remove()
         })
-    
+
         btnExcluir.addEventListener("click", async (e) => {
             e.preventDefault()
-            await Habit.deleteHabit({
-                "habit_id": id,
-            })
+            await Habit.deleteHabit(id)
+            window.location.reload(true)
         })
     }
 
-    static requisicoesPerfil(){
+    static requisicoesPerfil() {
         const btnSair = document.querySelector(".button_perfil_sair")
         const texto = document.querySelector(".modal_titulo_perfil")
         const btnSalvar = document.querySelector(".button_salvar_perfil")
         const modal = document.querySelector(".modal_perfil")
-    
-        btnSair.addEventListener("click", ()=>{
+
+        btnSair.addEventListener("click", () => {
             modal.remove()
         })
-    
-        btnSalvar.addEventListener("click", async (e)=>{
+
+        btnSalvar.addEventListener("click", async (e) => {
             e.preventDefault()
             await User.userUpdate({
                 "usr_image": texto.value
             })
         })
     }
-    
 }

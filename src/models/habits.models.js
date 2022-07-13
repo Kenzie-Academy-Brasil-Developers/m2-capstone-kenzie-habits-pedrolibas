@@ -1,6 +1,8 @@
 import Habit from "../controller/habit.controller.js";
+import Modais from "./modal.models.js";
+import Formularios from "../controller/formulario.controller.js";
 
-export class cards {
+export default class cards {
     constructor(id, title, description, category, status){
         this.id = id
         this.title = title
@@ -11,7 +13,6 @@ export class cards {
     static async listarHabitos() {
         const habito = await Habit.allHabit()
         habito.forEach(element => {
-            console.log('entrou')
             const card = new cards(element.habit_id, element.habit_title, element.habit_description, element.habit_category, element.habit_status)
             card.createCard()
         })
@@ -41,6 +42,11 @@ export class cards {
         descricao.innerText = this.description
         categoria.innerText = this.categoria
         status.type = 'checkbox'
+
+        editButton.addEventListener("click", ()=>{
+            Modais.editar(this.id)
+            Formularios.requisicaoEditar(this.id)
+        })
 
         editButton.append(i)
         divCategoria.append(categoria)
