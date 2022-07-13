@@ -1,5 +1,8 @@
 import Modais from "../models/modal.models.js"
 import Formularios from "../controller/formulario.controller.js"
+import cards from "../models/habits.models.js"
+
+cards.listarHabitos()
 
 class homePage{
     static botaoCriar(){

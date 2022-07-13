@@ -1,3 +1,5 @@
+import Formularios from "../controller/formulario.controller.js"
+
 export default class Modais{
     static criar() {
         const body = document.querySelector('body')
@@ -68,7 +70,7 @@ export default class Modais{
         body.appendChild(modalCriar)
     }
 
-    static editar(){
+    static editar(id){
         const body = document.querySelector("body")
         const modalEditar = document.createElement("div")
         const container = document.createElement("div")
@@ -134,6 +136,15 @@ export default class Modais{
         modalEditarBotoes.classList.add("modal_editar_botoes")
         btnExcluir.classList.add("button_excluir")
         btnSalvar.classList.add("button_salvar")
+
+        btnExcluir.addEventListener("click", (e)=>{
+            e.preventDefault()
+            const modal = document.querySelector(".modal_editar")
+            modal.remove()
+            
+            this.excluir()
+            Formularios.requisicaoExcluir(id)
+        })
 
         h2.appendChild(i)
         modalEditarCabecalho.append(h2, btnSair)
