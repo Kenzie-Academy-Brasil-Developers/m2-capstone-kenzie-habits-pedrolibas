@@ -64,8 +64,9 @@ export default class Formularios {
                     "habit_description": descricao.value,
                     "habit_category": selecionar.value,
                 })
-
                 window.location.reload(true)
+                aparecerPopUp1()
+                
             }
         })
     }
@@ -120,4 +121,37 @@ export default class Formularios {
 
         })
     }
+}
+let popUp1 = document.querySelector(".popUp1")
+let popUp2 = document.querySelector(".popUp2")
+let popUp3 = document.querySelector(".popUp3")
+
+function aparecerPopUp1(){
+    popUp1.style.display = "flex"
+    fechar1()
+}
+function fechar1(){
+    setTimeout(()=>{
+    popUp1.style.display = "none"
+}, 5000)
+
+}
+
+function aparecerPopUp2(){
+    
+    popUp2.style.display = "flex"
+}
+
+function fechar2(){
+    setTimeout(()=>{
+    popUp2.style.display = "none"
+}, 5000)
+}
+function aparecerPopUp3(){
+    popUp3.style.display = "flex"
+}
+function fechar3(){
+    setTimeout(()=>{
+    popUp3.style.display = "none"
+}, 5000)
 }

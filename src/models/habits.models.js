@@ -20,7 +20,6 @@ export default class cards {
 
     createCard() {
         const maindDiv = document.querySelector('.div_ul')
-
         const container = document.createElement('li')
         const status = document.createElement('input')
         const title = document.createElement('p')
