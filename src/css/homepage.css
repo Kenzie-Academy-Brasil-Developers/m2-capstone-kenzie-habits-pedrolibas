@@ -302,7 +302,7 @@ aside {
 }   */
 
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
 
     header {
         width: 80vw;
@@ -321,52 +321,25 @@ aside {
     .perfil_div {
         width: 80vw;
     }
-
-    /* .box_cabecalho{
+    
+    .box_secao {
+        width: 100vw;
         display: flex;
+        justify-content: center;
+    }
+
+    .box_cabecalho{
+        width: 80vw;
+    }
+
+    .div_ul{
+        display: flex;
+        justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        width: 80vw;
-        height: 7vh;
-    } */
-    /* .box_status{
-        margin-right: 5vw;
-        margin-left: 3vw;
-    } */
-    /* .box_titulo{} */
-    /* .box_editar{
-        margin-right: 3vw;
-        width: 100%;
-        text-align: right;
-    } */
-
-    /* .box_secao{
-        width: 80vw;
-    }  */
-
-
-    /* Content */
-    .conteudo_li {
-        margin: 0.5vh auto;
-        width: 80vw;
-        height: 7vh;
-
+        flex-direction: column;
     }
-
-    .conteudo_li input {
-        margin-right: 8vw;
-        margin-left: 5vw;
-
-    }
-
-    .conteudo_titulo {
-        text-align: left;
-        width: 40vw;
-        height: 100%;
-    }
-
-    .conteudo_li button {
-        margin-left: 14%;
+    .conteudo_li{
+        width: 80vw;
     }
 
     /*None */
