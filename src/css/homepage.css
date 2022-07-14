@@ -100,7 +100,8 @@ header img {
     background-color: #415AF3;
     border: 2px solid #415AF3;
     border-radius: 4px;
-    height: 3vh;
+    height: 2rem;
+    width: 5rem;
     font-weight: 600;
     margin-left: 3vw;
     cursor: pointer;
@@ -414,4 +415,44 @@ aside {
 
 .menu_dropdown:hover .menu_dropdown_conteudo {
     display: block;
+}
+
+.filtro_todos {
+    color: #FFFFFF;
+    background-color: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    height: 3vh;
+    font-weight: 500;
+    cursor: pointer;
+    width: 4.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro_todos:hover {
+    background-color: #ffffff;
+    color: #415AF3;
+}
+
+.filtro_concluido{
+    color: #FFFFFF;
+    background-color: #415AF3;
+    border: 2px solid #415AF3;
+    border-radius: 4px;
+    height: 3vh;
+    font-weight: 500;
+    cursor: pointer;
+    width: 6.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro_concluido:hover {
+    background-color: #ffffff;
+    color: #415AF3;
 }
