@@ -1,5 +1,7 @@
 import User from "../controller/user.controller.js"
 
+import Habit from "./habit.controller.js"
+
 export default class Formularios {
     static requisicaoEditar(id) {
         const btnSair = document.querySelector(".button_editar_sair")
