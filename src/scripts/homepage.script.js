@@ -34,8 +34,18 @@ class homePage {
             window.location.href = "../../index.html";
         });
     }
+
+    static perfil(){
+        const botao = document.querySelector(".editar_perfil")
+        botao.addEventListener("click", (e)=>{
+            e.preventDefault()
+            Modais.perfil()
+            Formularios.requisicoesPerfil()
+        })
+    }
 }
 
 homePage.botaoCriar()
 homePage.cabecalho()
 homePage.logout()
+homePage.perfil()
