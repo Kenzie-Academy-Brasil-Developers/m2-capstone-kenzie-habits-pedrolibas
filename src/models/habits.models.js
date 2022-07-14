@@ -43,8 +43,12 @@ export default class cards {
 
         title.innerText = this.title
         descricao.innerText = this.description
-        categoria.innerText = this.categoria
         status.type = 'checkbox'
+        
+        if(this.categoria === 'saude'){
+            this.categoria = 'saúde'
+        }
+        categoria.innerText = this.categoria
 
         editButton.addEventListener("click", () => {
             Modais.editar(this.id)
@@ -64,7 +68,7 @@ export default class cards {
                 window.location.reload(true)
             }
         })
-        divStatus.append(status, span)
+        divStatus.append(status)
         editButton.append(i)
         divCategoria.append(categoria)
         container.append(divStatus, title, descricao, divCategoria, editButton)
