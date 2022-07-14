@@ -10,14 +10,19 @@ export default class Formularios {
         const check = document.querySelector(".modal_editar_status input")
         const btnEnviar = document.querySelector(".button_salvar")
 
+        const inserir = document.querySelector(".modal_editar_form")
+        const span = document.createElement('span')
+        inserir.appendChild(span)
+
         btnSair.addEventListener("click", () => {
             modal.remove()
         })
 
+
         btnEnviar.addEventListener("click", async (e) => {
             e.preventDefault()
             if (titulo.value === "" || descricao.value === "" || seleciona.value === "") {
-                alert("preencha todos os campos")
+                span.innerText = "preencha todos os campos"
             } else {
                 await Habit.updateHabit({
                     "habit_title": titulo.value,
@@ -37,6 +42,10 @@ export default class Formularios {
         const descricao = document.querySelector('.modal__criar__descricao')
         const selecionar = document.querySelector('.modal__criar__categoria')
         const btnInserir = document.querySelector('.modal__botao__inserir')
+        
+        const inserir = document.querySelector('.modal__criar__botoes')
+        const span = document.createElement('span')
+        inserir.appendChild(span)
 
         btnSair.addEventListener("click", () => {
             modal.remove()
@@ -45,7 +54,7 @@ export default class Formularios {
         btnInserir.addEventListener("click", async (e) => {
             e.preventDefault()
             if (titulo.value === "" || descricao.value === "" || selecionar.value === "") {
-                alert("preencha todos os campos")
+                span.innerText = "preencha todos os campos"
             } else {
                 await Habit.createHabit({
                     "habit_title": titulo.value,
