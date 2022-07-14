@@ -46,6 +46,7 @@ export default class Formularios {
 
         btnInserir.addEventListener("click", async (e) => {
             e.preventDefault()
+            console.log(selecionar.value)
             if (titulo.value === "" || descricao.value === "" || selecionar.value === "") {
                 alert("preencha todos os campos")
             } else {

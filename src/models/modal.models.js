@@ -19,7 +19,7 @@ export default class Modais{
         const categoria = document.createElement('label')
         const selecao = document.createElement('select')
         const casa = document.createElement('option')
-        const estudo = document.createElement('option')
+        const estudos = document.createElement('option')
         const lazer = document.createElement('option')
         const trabalho = document.createElement('option')
         const saude = document.createElement('option')
@@ -31,7 +31,7 @@ export default class Modais{
         descricao.innerText = 'Descrição'
         categoria.innerText = 'Categoria'
         casa.innerText = 'Casa'
-        estudo.innerText = 'Estudo'
+        estudos.innerText = 'Estudos'
         lazer.innerText = 'Lazer'
         trabalho.innerText = 'Trabalho'
         saude.innerText = 'Saúde'
@@ -41,10 +41,10 @@ export default class Modais{
         textoDescricao.cols = '30'
         textoDescricao.rows = '10'
         casa.value = 'Casa'
-        estudo.value = 'Estudo'
+        estudos.value = 'Estudos'
         lazer.value = 'Lazer'
         trabalho.value = 'Trabalho'
-        saude.value = 'Saúde'
+        saude.value = 'saude'
 
         modalCriar.classList.add('modal__criar')
         container.classList.add('container')
@@ -61,7 +61,7 @@ export default class Modais{
 
         h2.appendChild(i)
         modalCriarCabecalho.append(h2, btnSair)
-        selecao.append(casa, estudo, lazer, trabalho, saude)
+        selecao.append(casa, estudos, lazer, trabalho, saude)
         modalCriarBotoes.append(btnInserir)
         form.append(titulo, textoTitulo, descricao, textoDescricao, categoria, selecao, modalCriarBotoes)
         modalInnerCriar.append(modalCriarCabecalho, form)
@@ -89,7 +89,7 @@ export default class Modais{
         const categoria = document.createElement("label")
         const selecao = document.createElement("select")
         const casa = document.createElement("option")
-        const estudo = document.createElement("option")
+        const estudos = document.createElement("option")
         const lazer = document.createElement("option")
         const trabalho = document.createElement("option")
         const saude = document.createElement("option")
@@ -104,7 +104,7 @@ export default class Modais{
         descricao.innerText = "Descrição"
         categoria.innerText = "Categoria"
         casa.innerText = "Casa"
-        estudo.innerText = "Estudo"
+        estudos.innerText = "Estudos"
         lazer.innerText = "Lazer"
         trabalho.innerText = "Trabalho"
         saude.innerText = "Saúde"
@@ -116,7 +116,7 @@ export default class Modais{
         textoDescricao.cols = "30"
         textoDescricao.rows = "10"
         casa.value = "casa"
-        estudo.value = "estudo"
+        estudos.value = "estudos"
         lazer.value = "lazer"
         trabalho.value = "trabalho"
         saude.value = "saude"
@@ -148,7 +148,7 @@ export default class Modais{
 
         h2.appendChild(i)
         modalEditarCabecalho.append(h2, btnSair)
-        selecao.append(casa, estudo, lazer, trabalho, saude)
+        selecao.append(casa, estudos, lazer, trabalho, saude)
         modalEditarStatus.append(status, check)
         modalEditarBotoes.append(btnExcluir, btnSalvar)
         form.append(titulo, textoTitulo, descricao, textoDescricao, categoria, selecao, modalEditarStatus, modalEditarBotoes)
