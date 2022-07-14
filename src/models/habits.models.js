@@ -32,6 +32,7 @@ export default class cards {
         const span = document.createElement("span")
 
         container.classList.add('conteudo_li')
+        container.classList.add('fadeInUp')
         status.classList.add('checkbox')
         title.classList.add('conteudo_titulo')
         descricao.classList.add('conteudo_descricao')

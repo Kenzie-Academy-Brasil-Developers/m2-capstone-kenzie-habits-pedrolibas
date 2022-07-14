@@ -30,11 +30,11 @@ export default class Modais{
         titulo.innerText = 'Título'
         descricao.innerText = 'Descrição'
         categoria.innerText = 'Categoria'
-        casa.innerText = 'Casa'
-        estudos.innerText = 'Estudos'
-        lazer.innerText = 'Lazer'
-        trabalho.innerText = 'Trabalho'
-        saude.innerText = 'Saúde'
+        casa.innerText = '🏠 Casa'
+        estudos.innerText = '📑 Estudos'
+        lazer.innerText = '🧩 Lazer'
+        trabalho.innerText = '💼 Trabalho'
+        saude.innerText = '💙 Saúde'
         btnInserir.innerText = 'Inserir'
 
         textoTitulo.type = 'text'
@@ -46,11 +46,11 @@ export default class Modais{
         trabalho.value = 'Trabalho'
         saude.value = 'saude'
 
-        modalCriar.classList.add('modal__criar')
+        modalCriar.classList.add('modal__criar', 'fadeIn')
         container.classList.add('container')
-        modalInnerCriar.classList.add('modal__criar__inner')
+        modalInnerCriar.classList.add('modal__criar__inner', 'fadeInUp')
         modalCriarCabecalho.classList.add('modal__criar__cabecalho')
-        i.classList.add('fa-solid', 'fa-pen-to-square')
+        i.classList.add('fa-solid', 'fa-file-circle-plus')
         btnSair.classList.add('button__criar__sair')
         form.classList.add('modal__criar__form')
         textoTitulo.classList.add('modal__criar__titulo')
@@ -104,11 +104,11 @@ export default class Modais{
         titulo.innerText = "Título"
         descricao.innerText = "Descrição"
         categoria.innerText = "Categoria"
-        casa.innerText = "Casa"
-        estudos.innerText = "Estudos"
-        lazer.innerText = "Lazer"
-        trabalho.innerText = "Trabalho"
-        saude.innerText = "Saúde"
+        casa.innerText = '🏠 Casa'
+        estudos.innerText = '📑 Estudos'
+        lazer.innerText = '🧩 Lazer'
+        trabalho.innerText = '💼 Trabalho'
+        saude.innerText = '💙 Saúde'
         status.innerText = "Status"
         btnExcluir.innerText = "Excluir"
         btnSalvar.innerText = "Salvar alterações"
@@ -123,9 +123,9 @@ export default class Modais{
         saude.value = "saude"
         check.type = "checkbox"
 
-        modalEditar.classList.add("modal_editar")
+        modalEditar.classList.add("modal_editar", "fadeIn")
         container.classList.add("container")
-        modalInnerEditar.classList.add("modal_inner_editar")
+        modalInnerEditar.classList.add("modal_inner_editar", "fadeInUp")
         modalEditarCabecalho.classList.add("modal_editar_cabecalho")
         i.classList.add("fa-solid", "fa-pen-to-square")
         btnSair.classList.add("button_editar_sair")
@@ -185,7 +185,7 @@ export default class Modais{
 
         modalExcluir.classList.add('modal__excluir')
         container.classList.add('container')
-        modalExcluirInner.classList.add('modal__excluir__inner')
+        modalExcluirInner.classList.add('modal__excluir__inner', 'fadeInUp')
         modalExcluirCabecalho.classList.add('modal__excluir__cabecalho')
         i.classList.add('fa-solid', 'fa-pen-to-square')
         btnSair.classList.add('button__excluir__sair')
@@ -225,9 +225,9 @@ export default class Modais{
 
         textoTitulo.type = "text"
 
-        modalPerfil.classList.add("modal_perfil")
+        modalPerfil.classList.add("modal_perfil", "fadeIn")
         container.classList.add("container")
-        modalInnerPerfil.classList.add("modal_inner_perfil")
+        modalInnerPerfil.classList.add("modal_inner_perfil", "fadeInUp")
         modalPerfilCabecalho.classList.add("modal_perfil_cabecalho")
         i.classList.add("fa-solid", "fa-pen-to-square")
         btnSair.classList.add("button_perfil_sair")

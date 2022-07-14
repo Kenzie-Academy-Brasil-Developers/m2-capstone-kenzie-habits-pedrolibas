@@ -56,6 +56,8 @@
     border: none;
     outline: 0;
     background-color: #F1F3F5;
+    border-radius: 5px;
+    padding: 0 1rem;
 }
 
 .modal_editar_form textarea {
@@ -64,12 +66,15 @@
     background-color: #F1F3F5;
     border: none;
     outline: 0;
-    padding: 1rem 1rem;
+    border-radius: 5px;
+    padding: 0 1rem;
 }
 
 .modal_editar_form select {
     height: 2.5rem;
     background-color: #F1F3F5;
+    border-radius: 5px;
+    border: transparent;
 }
 
 .modal_editar_form label {
@@ -137,11 +142,12 @@
     padding: 12px 50px;
     border-radius: 0.25rem;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .button_salvar:hover {
-    background-color: #b9c3fa75;
-    color: #A0ADF9;
+    background-color: #415AF3;
+    color: #FFFFFF;
 }
 
 .modal_editar_botoes{
