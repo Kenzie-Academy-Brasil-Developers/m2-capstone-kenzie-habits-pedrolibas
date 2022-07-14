@@ -456,3 +456,7 @@ aside {
     background-color: #ffffff;
     color: #415AF3;
 }
+
+.conteudo_editar{
+    cursor: pointer;
+}
