@@ -59,6 +59,8 @@ body {
     border: none;
     outline: 0;
     background-color: #F1F3F5;
+    border-radius: 5px;
+    padding: 0 1rem;
 }
 
 .button_perfil_sair {
@@ -84,6 +86,11 @@ body {
     padding: 12px 50px;
     border-radius: 0.25rem;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.button_salvar_perfil:hover {
+    background-color: #415AF3;
 }
 
 .modal_perfil_cabecalho h2{
