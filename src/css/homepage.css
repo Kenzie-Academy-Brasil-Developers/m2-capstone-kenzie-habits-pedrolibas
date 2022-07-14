@@ -464,3 +464,55 @@ aside {
 .verifica_perfil{
     color: red;
 }
+.popUp1{
+    display: none;
+    height: 111px;
+    width: 453px;
+    left: 625px;
+    top: 4035px;
+    border-radius: 8px;
+    border: 2px solid #56CF8E;
+    background-color: #E6F8EE;
+    justify-content: flex-start;
+    align-items: center;
+}
+.popUp2{
+    display: none;
+    height: 111px;
+    width: 453px;
+    left: 625px;
+    top: 4035px;
+    border-radius: 8px;
+    border: 2px solid #56CF8E;
+    background-color: #E6F8EE;
+    justify-content: flex-start;
+    align-items: center;
+}
+.popUp3{
+    display: none;
+    height: 111px;
+    width: 453px;
+    left: 625px;
+    top: 4035px;
+    border-radius: 8px;
+    border: 2px solid #56CF8E;
+    background-color: #E6F8EE;
+    justify-content: flex-start;
+    align-items: center;
+}
+figure{
+    margin: 50px;
+}
+.check_do_modal{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #56CF8E;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-weight: 800;
+    margin-bottom: 15px;
+}
