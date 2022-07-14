@@ -139,6 +139,11 @@
     cursor: pointer;
 }
 
+.button_salvar:hover {
+    background-color: #b9c3fa75;
+    color: #A0ADF9;
+}
+
 .modal_editar_botoes{
     width: 100%;
     display: flex;

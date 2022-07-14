@@ -113,6 +113,11 @@ body {
     cursor: pointer;
 }
 
+.modal__botao__inserir:hover {
+    background-color: #4150D2;
+    color: #ffffff;
+}
+
 .modal__criar__botoes{
     width: 100%;
     display: flex;

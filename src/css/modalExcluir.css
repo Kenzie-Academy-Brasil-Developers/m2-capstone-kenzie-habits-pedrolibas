@@ -69,17 +69,31 @@ body {
     padding: 12px 50px;
     border-radius: 0.25rem;
     cursor: pointer;
+    border: 2px solid;
+}
+
+.modal__botao__cancelar:hover{
+    color: #ADB5BD;
+    background-color: #ffffff;
+    border: 2px solid #ADB5BD;
 }
 
 .modal__botao__excluir {
     background-color: #E64445;
-    border: none;
+    border: 2px solid;
     font-weight: 600;
     font-size: 16px;
     color: #FFFFFF;
     padding: 12px 50px;
     border-radius: 0.25rem;
     cursor: pointer;
+}
+
+.modal__botao__excluir:hover{
+    background-color: #ffffff;
+    color: #E64445;
+    border: 2px solid #E64445;
+
 }
 
 .modal__excluir__botoes{
