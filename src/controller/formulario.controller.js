@@ -1,4 +1,4 @@
-import Habit from "../controller/habit.controller.js"
+import User from "../controller/user.controller.js"
 
 export default class Formularios {
     static requisicaoEditar(id) {
@@ -91,9 +91,15 @@ export default class Formularios {
 
         btnSalvar.addEventListener("click", async (e) => {
             e.preventDefault()
+            const userImg = JSON.parse(localStorage.getItem("@kenzie-habits:user"))
+
             await User.userUpdate({
                 "usr_image": texto.value
             })
+
+            userImg.usr_image = texto.value
+            localStorage.setItem("@kenzie-habits:user", JSON.stringify(userImg))
+            window.location.reload(true)
         })
     }
 }
