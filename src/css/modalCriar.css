@@ -1,5 +1,8 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
 
-.modal_editar {
+.modal__criar {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -9,14 +12,14 @@
     background-color: rgba(0, 0, 0, 0.65);
 }
 
-.modal_editar>.container {
+.modal__criar>.container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: inherit;
 }
 
-.modal_inner_editar {
+.modal__criar__inner {
     background-color: white;
     width: 31.375rem;
     max-width: 100%;
@@ -25,32 +28,32 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
     position: relative;
 }
 
-.modal_editar_cabecalho {
+.modal__criar__cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 85%;
 }
 
-.modal_editar_cabecalho h2 {
+.modal__criar__cabecalho h2 {
     font-weight: 600;
     font-size: 20px;
     color: #212529;
 }
 
-.modal_editar_form {
+.modal__criar__form {
     display: flex;
     flex-direction: column;
     width: 85%;
     gap: 1rem;
 }
 
-.modal_editar_form input {
+.modal__criar__form input {
     height: 2.5rem;
     border-radius: 0.25rem;
     border: none;
@@ -58,7 +61,7 @@
     background-color: #F1F3F5;
 }
 
-.modal_editar_form textarea {
+.modal__criar__form textarea {
     resize: none;
     height: 5rem;
     background-color: #F1F3F5;
@@ -67,37 +70,24 @@
     padding: 1rem 1rem;
 }
 
-.modal_editar_form select {
+.modal__criar__form select {
     height: 2.5rem;
     background-color: #F1F3F5;
 }
 
-.modal_editar_form label {
+.modal__criar__form label {
     font-weight: 400;
     font-size: 14px;
     color: #343A40;
 }
 
-.modal_editar_status {
-    display: flex;
-    height: 2.5rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.modal_editar_status>input {
-    margin: 0;
-    height: auto;
-    cursor: pointer;
-}
-
-.modal_categoria_editar{
+.modal__criar__categoria{
     font-weight: 500;
     font-size: 16px;
     color: #343A40;
 }
 
-.button_editar_sair {
+.button__criar__sair {
     font-weight: 600;
     font-size: 20px;
     background-color: transparent;
@@ -107,28 +97,12 @@
     cursor: pointer;
 }
 
-.button_editar_sair:hover {
+.button__criar__sair:hover {
     color: red;
 }
 
-.button_excluir {
-    background-color: #F1F3F5;
-    border: none;
-    font-weight: 600;
-    font-size: 16px;
-    color: #343A40;
-    padding: 12px 50px;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: 244ms;
-}
-
-.button_excluir:hover{
-    background-color: red;
-    color: white;
-}
-
-.button_salvar {
+.modal__botao__inserir {
+    width: 100%;
     background-color: #A0ADF9;
     border: none;
     font-weight: 600;
@@ -139,24 +113,24 @@
     cursor: pointer;
 }
 
-.button_salvar:hover {
-    background-color: #b9c3fa75;
-    color: #A0ADF9;
+.modal__botao__inserir:hover {
+    background-color: #4150D2;
+    color: #ffffff;
 }
 
-.modal_editar_botoes{
+.modal__criar__botoes{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #CA3E3E;
+}
+.modal__criar__botoes span{
+    margin-top: 1vh;
 }
 
-.modal_editar_cabecalho h2{
+.modal__criar__cabecalho h2{
     display: flex;
     flex-direction: row-reverse;
-}
-
-.modal_editar_form span{
-    color: #CA3E3E;
-    align-self: center;
-    margin-top: 1vh;
 }
