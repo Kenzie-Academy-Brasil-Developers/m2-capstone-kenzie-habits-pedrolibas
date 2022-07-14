@@ -180,7 +180,7 @@ header img {
 }
 
 .container_status input {
-    width: 5rem;
+    width: 100%;
     padding: 0.875rem;
     position: relative;
 }
@@ -293,13 +293,13 @@ aside {
 }
 .checkbox::after{
     background-color: #56CF8E;
-}
+}    */
 .check_titulo{
-
+    text-decoration: line-through;
 }
 .check_li{ 
-
-}   */
+    background-color: #E9ECEF;
+}
 
 
 @media (max-width: 990px) {

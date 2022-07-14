@@ -47,6 +47,8 @@ export default class cards {
 
         if(this.status === true){
             status.checked = "true"
+            container.style.backgroundColor = '#E9ECEF'
+            title.style.textDecoration = 'line-through'
         }
         
         if(this.categoria === 'saude'){
@@ -59,9 +61,12 @@ export default class cards {
             Formularios.requisicaoEditar(this.id)
         })
 
+        // Evento de Check na tarefa
         status.addEventListener("click", async () => {
             if (status.checked) {
                 await Habit.completeHabit(this.id)
+                container.style.backgroundColor = '#E9ECEF'
+                title.style.textDecoration = 'line-through'
             } else if (!status.checked) {
                 await Habit.createHabit({
                     "habit_title": this.title,
