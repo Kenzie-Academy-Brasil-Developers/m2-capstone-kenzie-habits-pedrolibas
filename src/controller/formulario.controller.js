@@ -11,6 +11,7 @@ export default class Formularios {
         const seleciona = document.querySelector(".modal_categoria_editar")
         const check = document.querySelector(".modal_editar_status input")
         const btnEnviar = document.querySelector(".button_salvar")
+        const popUp3 = document.querySelector(".popUp3")
 
         const inserir = document.querySelector(".modal_editar_form")
         const span = document.createElement('span')
@@ -31,8 +32,9 @@ export default class Formularios {
                     "habit_description": descricao.value,
                     "habit_category": seleciona.value
                 }, id)
-
-                window.location.reload(true)
+                popUp3.style.display = "flex"
+                modal.remove()
+                setTimeout(()=>{window.location.reload(true)}, 3500)
             }
         })
     }
@@ -44,6 +46,7 @@ export default class Formularios {
         const descricao = document.querySelector('.modal__criar__descricao')
         const selecionar = document.querySelector('.modal__criar__categoria')
         const btnInserir = document.querySelector('.modal__botao__inserir')
+        const popUp1 = document.querySelector(".popUp1")
         
         const inserir = document.querySelector('.modal__criar__botoes')
         const span = document.createElement('span')
@@ -64,8 +67,10 @@ export default class Formularios {
                     "habit_description": descricao.value,
                     "habit_category": selecionar.value,
                 })
-                window.location.reload(true)
-                aparecerPopUp1()
+                popUp1.style.display = "flex"
+                modal.remove()
+                setTimeout(()=>{window.location.reload(true)}, 3500)
+                
                 
             }
         })
@@ -97,6 +102,7 @@ export default class Formularios {
         const texto = document.querySelector(".modal_titulo_perfil")
         const btnSalvar = document.querySelector(".button_salvar_perfil")
         const modal = document.querySelector(".modal_perfil")
+        const popUp2 = document.querySelector(".popUp2")
 
         btnSair.addEventListener("click", () => {
             modal.remove()
@@ -113,7 +119,9 @@ export default class Formularios {
                 })
                 userImg.usr_image = texto.value
                 localStorage.setItem("@kenzie-habits:user", JSON.stringify(userImg))
-                window.location.reload(true)
+                popUp2.style.display = "flex"
+                modal.remove()
+                setTimeout(()=>{window.location.reload(true)}, 3500)
             } else {
                 span.innerText = "Preencha o campo"
             }
@@ -121,37 +129,4 @@ export default class Formularios {
 
         })
     }
-}
-let popUp1 = document.querySelector(".popUp1")
-let popUp2 = document.querySelector(".popUp2")
-let popUp3 = document.querySelector(".popUp3")
-
-function aparecerPopUp1(){
-    popUp1.style.display = "flex"
-    fechar1()
-}
-function fechar1(){
-    setTimeout(()=>{
-    popUp1.style.display = "none"
-}, 5000)
-
-}
-
-function aparecerPopUp2(){
-    
-    popUp2.style.display = "flex"
-}
-
-function fechar2(){
-    setTimeout(()=>{
-    popUp2.style.display = "none"
-}, 5000)
-}
-function aparecerPopUp3(){
-    popUp3.style.display = "flex"
-}
-function fechar3(){
-    setTimeout(()=>{
-    popUp3.style.display = "none"
-}, 5000)
 }
