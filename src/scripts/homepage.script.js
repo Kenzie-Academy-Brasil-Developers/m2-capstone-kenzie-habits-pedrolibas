@@ -2,6 +2,7 @@ import Modais from "../models/modal.models.js"
 import Formularios from "../controller/formulario.controller.js"
 import cards from "../models/habits.models.js"
 import User from "../controller/user.controller.js"
+import Habit from "../controller/habit.controller.js"
 
 cards.listarHabitos()
 
@@ -43,9 +44,32 @@ class homePage {
             Formularios.requisicoesPerfil()
         })
     }
+
+    static filtro(){
+        const todos = document.querySelector(".filtro_todos")
+        const concluido = document.querySelector(".filtro_concluido")
+        const ul = document.querySelector(".div_ul")
+
+        todos.addEventListener("click", ()=>{
+            ul.innerHTML = ""
+            cards.listarHabitos()
+        })
+
+        concluido.addEventListener("click", async ()=>{
+            ul.innerHTML = ""
+            const resultado = await Habit.allHabit()
+            const filtrados = resultado.filter(elem=>elem.habit_status)
+            console.log(filtrados)
+            const cartão = filtrados.forEach(elem =>{
+                const card = new cards(elem.habit_id, elem.habit_title, elem.habit_description, elem.habit_category, elem.habit_status)
+                card.createCard()
+            })
+        })
+    }
 }
 
 homePage.botaoCriar()
 homePage.cabecalho()
 homePage.logout()
 homePage.perfil()
+homePage.filtro()

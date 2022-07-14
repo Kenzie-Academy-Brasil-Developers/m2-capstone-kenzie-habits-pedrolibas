@@ -44,6 +44,10 @@ export default class cards {
         title.innerText = this.title
         descricao.innerText = this.description
         status.type = 'checkbox'
+
+        if(this.status === true){
+            status.checked = "true"
+        }
         
         if(this.categoria === 'saude'){
             this.categoria = 'saúde'
