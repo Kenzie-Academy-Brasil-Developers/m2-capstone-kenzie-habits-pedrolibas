@@ -12,6 +12,15 @@ class homePage{
             Formularios.requisicaoCriar()
         })
     }
+
 }
 
 homePage.botaoCriar()
+const sair = document.querySelector(".sair_de_tudo");
+
+sair.addEventListener("click", () => logout());
+
+function logout() {
+    localStorage.clear();
+    window.location.href = "src/views/homepage.html";
+  }
