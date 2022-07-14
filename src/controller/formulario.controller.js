@@ -104,14 +104,20 @@ export default class Formularios {
         btnSalvar.addEventListener("click", async (e) => {
             e.preventDefault()
             const userImg = JSON.parse(localStorage.getItem("@kenzie-habits:user"))
+            const span = document.querySelector(".verifica_perfil")
 
-            await User.userUpdate({
-                "usr_image": texto.value
-            })
+            if(texto.value != ""){
+                await User.userUpdate({
+                    "usr_image": texto.value
+                })
+                userImg.usr_image = texto.value
+                localStorage.setItem("@kenzie-habits:user", JSON.stringify(userImg))
+                window.location.reload(true)
+            } else {
+                span.innerText = "Preencha o campo"
+            }
 
-            userImg.usr_image = texto.value
-            localStorage.setItem("@kenzie-habits:user", JSON.stringify(userImg))
-            window.location.reload(true)
+
         })
     }
 }

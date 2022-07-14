@@ -216,6 +216,7 @@ export default class Modais{
         const titulo = document.createElement("label")
         const textoTitulo = document.createElement("input")
         const btnSalvar = document.createElement("button")
+        const span = document.createElement("span")
 
         h2.innerText = "Editar perfil"
         btnSair.innerText = "X"
@@ -233,11 +234,12 @@ export default class Modais{
         form.classList.add("modal_perfil_form")
         textoTitulo.classList.add("modal_titulo_perfil")
         btnSalvar.classList.add("button_salvar_perfil")
+        span.classList.add("verifica_perfil")
 
         h2.appendChild(i)
         modalPerfilCabecalho.append(h2, btnSair)
         form.append(titulo, textoTitulo, btnSalvar)
-        modalInnerPerfil.append(modalPerfilCabecalho, form)
+        modalInnerPerfil.append(modalPerfilCabecalho, form, span)
         container.appendChild(modalInnerPerfil)
         modalPerfil.appendChild(container)
         body.appendChild(modalPerfil)

@@ -460,3 +460,7 @@ aside {
 .conteudo_editar{
     cursor: pointer;
 }
+
+.verifica_perfil{
+    color: red;
+}
