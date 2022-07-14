@@ -21,7 +21,8 @@ button {
 }
 
 .principal {
-  width: 67.5rem;
+  max-width: 67.5rem;
+  width: 90%;
   height: 30rem;
   display: flex;
   border-radius: 0.5rem;
@@ -139,4 +140,29 @@ button {
   color: red;
   text-align: center;
   font-weight: 700;
+}
+@media (max-width: 785px){
+  .login{
+    padding: 1rem;
+  }
+  .apresentacao{
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 425px){
+  .principal{
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .apresentacao{
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .login{
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
 }
