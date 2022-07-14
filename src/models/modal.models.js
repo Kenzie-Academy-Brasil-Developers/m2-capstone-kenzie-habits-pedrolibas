@@ -97,6 +97,7 @@ export default class Modais{
         const check = document.createElement("input")
         const btnExcluir = document.createElement("button")
         const btnSalvar = document.createElement("button")
+        const span = document.createElement("span")
 
         h2.innerText = " Editar hábito"
         btnSair.innerText = "X"
@@ -136,6 +137,7 @@ export default class Modais{
         modalEditarBotoes.classList.add("modal_editar_botoes")
         btnExcluir.classList.add("button_excluir")
         btnSalvar.classList.add("button_salvar")
+        
 
         btnExcluir.addEventListener("click", (e)=>{
             e.preventDefault()
